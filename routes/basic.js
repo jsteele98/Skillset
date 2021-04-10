@@ -153,9 +153,14 @@ router.get('/feedback/:name', function(req,res,next){
         question = assessment[assessmentname][question]
         if(!req.session.assessment[assessmentname]["question"+question.id] || req.session.assessment[assessmentname]["question"+question.id] != question.answer){
             missed++;
+            youanswered = question.answerlist[req.session.assessment[assessmentname]["question"+question.id]-1]
+            if(!youanswered){
+                youanswered= {"answer":""}
+            }
             missedquestions.push({"question":question.question,
-            "youanswered":question.answerlist[req.session.assessment[assessmentname]["question"+question.id]-1],
+            "youanswered":youanswered,
             "answer":question.answerlist[question.answer-1]});
+
         }
     }
     //console.log({"name":assessmentname,"total":total,"score":total-missed,"missed":missedquestions});
