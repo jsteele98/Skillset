@@ -97,7 +97,7 @@ jobs = [
 
 
 assessment = {
-    "excel":[
+    "Excel":[
         {
             "id":1,
             "question": 'What is the correct syntax for the "If" function?',
