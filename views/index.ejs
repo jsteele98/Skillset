@@ -33,9 +33,11 @@
                 <h1> <%- job.title %> </h1>
                 <h2> <%- job.company %> </h2>
                 <%- job.description %>
-                <button onclick="location.href = '/assessment';">Take Excel assessment</button>
-                <button onclick="location.href = '/assessment';">Take Management Consulting assessment</button>
-                <button onclick="location.href = '/assessment';">Take Marketing assessment</button>
+                <div class = "assessmentButtons">
+                    <p> <button onclick="location.href = '/assessment';">Take Excel Skills Assessment</button> </p>
+                    <p> <button onclick="location.href = '/assessment';">Take Financial Modeling Assessment</button> </p>
+                    <p> <button onclick="location.href = '/assessment';">Take Critical Thinking Assessment</button> </p>
+                </div>
             </div>
         <% }); %>
         

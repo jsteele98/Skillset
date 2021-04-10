@@ -114,3 +114,6 @@ button:hover {
 .job_detail button{
     align-items: right;
 }
+.assessmentButtons{
+    padding-left: 30px;
+}
