@@ -40,30 +40,50 @@ blockquote{
     width: 80%;
     margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .container.flex{
+        flex-direction: column;
+        width: 90%;
+    }
+
+        
+    div.jobpostings{
+        width: 100%;
+    }
+
+    div.job_detail{
+        width: 80%;
+        
+    }
+}
+
 .screenedApplicants h2{
     padding: 15px;
     margin: 0;
     text-align: center;
 }
 .header{
-    /* background-image: ; */
-    /* background: radial-gradient(closest-side, #0062b8, #002e5d); */
-    /* radial-gradient(circle at center, red 0, blue, green 100%)
-
-    <radialGradient id="radial-gradient" cx="0.486" cy="0.5" r="0.767" gradientUnits="objectBoundingBox">
+    background: rgb(0,98,184);
+    background: radial-gradient(ellipse , rgba(0,98,184,1) 0%, rgba(0,46,93,1) 100%);
+    /* <radialGradient id="radial-gradient" cx="0.486" cy="0.5" r="0.767" gradientUnits="objectBoundingBox">
         <stop offset="0" stop-color="#0062b8"/>
         <stop offset="1" stop-color="#002e5d"/>
       </radialGradient> */
-    background:#002e5d;
-    /* background: #18c27d;; */
-    /* background: black; */
+
+    height: 120px;
+    width: 100%;
     color: white;
+    position: relative;
 }
-.header h1{
-    text-align: center;
-    margin: 0;
-    padding: 5px 0;
-    /* text-transform: uppercase; */
+.header .logo{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    left: 16%;
+}
+.logo svg{
+    max-width: 90%;
 }
 
 .feedbackHeader h1{

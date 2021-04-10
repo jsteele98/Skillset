@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.146" height="54.146" viewBox="0 0 54.146 54.146">
+  <!-- <circle cx="25" cy="25" r="20" stroke="black" 
+                    stroke-width="3" fill="rgba(0,46,93,1)" /> -->
+  <g id="Path_3" data-name="Path 3" transform="translate(0 27.073) rotate(-45)" fill="none">
+    <path d="M0,0H38.287V38.287H0Z" stroke="none"/>
+    <path d="M 4 4 L 4 34.2867431640625 L 34.2867431640625 34.2867431640625 L 34.2867431640625 4 L 4 4 M 0 0 L 38.2867431640625 0 L 38.2867431640625 38.2867431640625 L 0 38.2867431640625 L 0 0 Z" stroke="none" fill="rgba(0,46,93,1)"/>
+  </g>
+  <path id="Path_2" data-name="Path 2" d="M0,33.871H15.786V0" transform="translate(40.047 0.565) rotate(45)" fill="none" stroke="rgba(0,46,93,1)" stroke-width="8"/>
+  
+</svg>
