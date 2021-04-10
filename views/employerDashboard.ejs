@@ -8,10 +8,53 @@
     <link href="../assets/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    
+    <div class = "header">
+        <h1>SkillSet</h1>
+        </div>
     <div class = "feedbackHeader">
         <h1> Employer Dashboard </h1>
     </div>
-    <div class = "feedbackBody">
+    <div class = "container flex">
+        <div class="screenedApplicants">
+
+            <h2> Screened Applicants </h2>
+            
+            <div class = "scroll listings">
+                
+                
+                <% [{"id":1,"name":"Tyler Jorgensen","score":"15/15"},
+                {"id":2,"name":"Jacob Steele","score":"13/15"},
+                {"id":3,"name":"Gavin Fairbanks","score":"12/15"},
+                {"id":4,"name":"Jordan Knudsen","score":"12/15"}
+                ].forEach(function(el){ console.log(el) %>
+                    <div class = "jobPost" id="job<%- el.id %>" onclick="selectjob(<%- el.id %>)">
+                        <div class = "jobDescription">
+                            <h2> <%- el.name %> </h2>
+                            <h4> <%- el.score %> </h4>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+        
+        <% active = true
+         jobs.forEach(function(job){ %>
+            <div class="scroll job_detail<% if (active) { active = false %> active<% } %>" id="detail<%- job.id %>">
+                <h1> <%- job.title %> </h1>
+                <h2> <%- job.company %> </h2>
+                <%- job.description %>
+                <div class = "assessmentButtons">
+                    <p> <button onclick="location.href = '/assessment';">Take Excel Skills Assessment</button> </p>
+                    <p> <button onclick="location.href = '/assessment';">Take Financial Modeling Assessment</button> </p>
+                    <p> <button onclick="location.href = '/assessment';">Take Critical Thinking Assessment</button> </p>
+                </div>
+            </div>
+        <% }); %>
+        
+    </div>
+    <!-- 
+        <div class = "feedbackBody">
         <h2> 50 out of 200 applicants passed initial assessments </h2>
         <h2> List of Qualified Applicants: </h2>
             <p> Tyler Jorgensen: 15/15</p>
@@ -20,6 +63,7 @@
             <p> Jordan Knudsen: 12/15</p>
             <p> ...</p>
     </div>
+    -->
 
 
 
