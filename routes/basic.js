@@ -96,17 +96,70 @@ jobs = [
 ]
 
 
+assessment = {
+    "excel":[
+        {
+            "id":1,
+            "question": 'What is the correct syntax for the "If" function?',
+            "answerlist": [
+                {id:1,"answer":"IF (logical_test, [value_if_true], [value_if_false])"},
+                {id:2,"answer":"IF ([value_if_true], [value_if_false], logical_test ])"},
+                {id:3,"answer":"IF ([value_if_true], logical_test, [value_if_false] ])"}
+            ],
+            "answer": 1
+        },    
+        {
+            "id":2,
+            "question": 'If I want to multiply A by B and divide the product by C, what is the syntax?',
+            "answerlist": [ 
+                {id:1,"answer":"A*B/C"},
+                {id:2,"answer":"A*(B/C)"},
+                {id:3,"answer":"(A*B)/C"}
+            ],
+            "answer": 3
+        }
+    ]
+}
+
+
 router.get('/', function(req,res,next){
-	return res.render("index.ejs",{jobs:jobs});
+	return res.render("index.ejs",{"jobs":jobs});
 });
 
 
-router.get('/assessment', function(req,res,next){
-	return res.render("assessment.ejs");
+router.get('/assessment/:name', function(req,res,next){
+	return res.render("assessment.ejs",{"assessment":assessment[req.params["name"]],"name":req.params["name"]});
 });
 
-router.get('/feedback', function(req,res,next){
-	return res.render("feedback.ejs");
+router.post('/assessment/:name', function(req,res,next){
+    console.log(req.body);
+    if(!req.session.assessment){
+        req.session.assessment = {};
+    }
+    req.session.assessment[req.params["name"]] = req.body;
+    return res.redirect("/feedback/"+[req.params["name"]]);
+});
+
+router.get('/feedback/:name', function(req,res,next){
+    assessmentname = req.params["name"];
+    missedquestions = [];
+    if(!req.session.assessment && !req.session.assessment[assessmentname]){
+        return res.redirect("/");
+    }
+    total = 0;
+    missed = 0;
+    for(question in assessment[assessmentname]){
+        total++;
+        question = assessment[assessmentname][question]
+        if(!req.session.assessment[assessmentname]["question"+question.id] || req.session.assessment[assessmentname]["question"+question.id] != question.answer){
+            missed++;
+            missedquestions.push({"question":question.question,
+            "youanswered":question.answerlist[req.session.assessment[assessmentname]["question"+question.id]-1],
+            "answer":question.answerlist[question.answer-1]});
+        }
+    }
+    //console.log({"name":assessmentname,"total":total,"score":total-missed,"missed":missedquestions});
+	return res.render("feedback.ejs",{"name":assessmentname,"total":total,"score":total-missed,"missed":missedquestions});
 });
 
 router.get('/dashboard', function(req,res,next){

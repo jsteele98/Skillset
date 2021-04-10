@@ -40,8 +40,8 @@ app.use(session({
   }),
   saveUninitialized: false,
 	unset: 'destroy',
-  secure: true,
-  cookie: { maxAge: 60 * 60 * 1000, httpOnly:true,secure:true,sameSite:true } // 30 days
+  secure: false,
+  cookie: { maxAge: 60 * 60 * 1000, httpOnly:true,secure:false,sameSite:true } // 30 days
 }));
 
 

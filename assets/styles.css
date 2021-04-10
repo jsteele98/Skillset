@@ -114,7 +114,7 @@ html,body{
     border-radius: 10px;
   }
 
-button{
+button,input[type="submit"]{
     background-color: #18c27d;
     border: none;
     color: white;

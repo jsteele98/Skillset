@@ -14,25 +14,33 @@
     <div class="container assessment">
             
         <div class = "feedbackHeader">
-            <h1> Excel Assessment Feedback: Tyler Jorgensen </h1>
+            <h1> <%= name %> Assessment Feedback: </h1>
         </div>
         <div class = "feedbackBody">
-            <h2> Score out of 2 questions: 1 </h2>
+            <h2> Score out of <%= total %>: <%= score %> </h2>
             <h2> Questions you missed: </h2>
-                <div class = "questionsMissed">
-                    <p> What is the correct syntax for the "If" function? </p>
-                    <p> You answered: "IF ([value_if_true], [value_if_false], logical_test ])"</p>
-                    <p> Correct answer: "IF (logical_test, [value_if_true], [value_if_false])" </p>
-                </div>
+            
+            <% console.log(missed); missed.forEach(function(question){ console.log(question); %>
+            <b> <%= question.question %> </b>
+                <p> You answered:  "<%= question.youanswered.answer %>"</p>
+                <p> Correct answer: "<%= question.answer.answer %>" </p>
             </ul>
-            <h2> Minimum score required by employer: 2</h2>
-                <!-- <p> Congratulations, you passed the application screening process!</p>
-                <p> Please wait for a message/phone call from us! </p> -->
-                <p> Sorry, you did not meet the minimum proficiency level required for this position.</p>
-                <p> Here is a list of resources to help you improve your skillset based on the questions you missed:</p>
-                <div class = "listOfResources"> 
-                    <li> <a href = "https://corporatefinanceinstitute.com/resources/excel/"> corporatefinanceinstitute.com/resources/excel </a>  </li>
-                </div>
+            <% }); %>
+            <h2> Minimum score required by employer: <%= total %></h2>
+                
+                <% if(total == score) { %>
+                    <p> Congratulations, you passed the application screening process!</p>
+                    <p> Please wait for a message/phone call from us! </p>
+                
+                <% } else { %>
+                    <p> (or) Sorry, you did not meet the minimum proficiency level required for this position.</p>
+                    <p> Here is a list of resources to help you improve your skillset based on the questions you missed:</p>
+                    <div class = "listOfResources"> 
+                        <li> (first resource) </li>
+                        <li> (second resource) </li>
+                        <li> (etc...) </li>
+                    </div>
+                <% } %>
 
 
 
