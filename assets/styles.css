@@ -68,11 +68,14 @@ blockquote{
 
 .feedbackHeader h1{
     text-align: center;
-    position:absolute;
-    color:white;
+}
+.dashboardHeader h1{
     z-index: 99;
     right: 100px;
-    top: 30px;;
+    top: 30px;
+    position:absolute;
+    color:white;
+
 }
 .feedbackBody{
     padding-left: 15px;
