@@ -29,16 +29,29 @@
         </div>
         
         <% active = true
-         jobs.forEach(function(job){ %>
+        jobs.forEach(function(job){ %>
             <div class="scroll job_detail<% if (active) { active = false %> active<% } %>" id="detail<%- job.id %>">
                 <h1> <%- job.title %> </h1>
                 <h2> <%- job.company %> </h2>
                 <%- job.description %>
+
+                
+                <h2> Assessments: </h2>
+                
+                <% for (var key in assessment){ block = assessment[key]; question = block[0] %>
+                <p>example:</p>
+                <blockquote>
+                    <b><%= question.question %></b><br>
+                    <% question.answerlist.forEach(function(answer){ %>
+                    <input type="radio" name="example" disabled id="value<%= answer.id %>" >
+                    <label for="value<%= answer.id %>"><%= answer.answer %></label><br>
+                    <% }); %>
+                </blockquote>
                 <div class = "assessmentButtons">
-                    <p> <button onclick="location.href = '/assessment/Excel';">Take Excel Skills Assessment</button> </p>
-                    <p> <button onclick="location.href = '/assessment/Excel';">Take Financial Modeling Assessment</button> </p>
-                    <p> <button onclick="location.href = '/assessment/Excel';">Take Critical Thinking Assessment</button> </p>
+                    <p> <button onclick="location.href = '/assessment/<%= key %>';"><%= question.button %></button> </p>
                 </div>
+                <% } %>
+                <iframe id = "rick" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
             </div>
         <% }); %>
         

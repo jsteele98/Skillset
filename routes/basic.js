@@ -99,6 +99,8 @@ jobs = [
 assessment = {
     "Excel":[
         {
+            "button":"Take Excel Skills Assessment",
+            "name":"Excel",
             "id":1,
             "question": 'What is the correct syntax for the "If" function?',
             "answerlist": [
@@ -118,12 +120,63 @@ assessment = {
             ],
             "answer": 3
         }
+    ],
+    "Financial_Modeling":[
+        {
+            "button":"Take Financial Modeling Assessment",
+            "name":"Financial Modeling",
+            "id":1,
+            "question": 'Our company has an asset that depreciates at a rate of $660/Yr following a straight-line model. The following year, the company enacts procedural changes that allows accounting to record the depreciation at a rate of $330/Yr for the same type of asset while still using a straight-line model. What is the reason for this?',
+            "answerlist": [
+                {id:1,"answer":"Asset lost value"},
+                {id:2,"answer":"Asset useful life increased"},
+                {id:3,"answer":"Changed depreciation accounting method"}
+            ],
+            "answer": 2
+        }
+        // ,  
+        // {
+        //     "id":2,
+        //     "question": 'If I want to multiply A by B and divide the product by C, what is the syntax?',
+        //     "answerlist": [ 
+        //         {id:1,"answer":"A*B/C"},
+        //         {id:2,"answer":"A*(B/C)"},
+        //         {id:3,"answer":"(A*B)/C"}
+        //     ],
+        //     "answer": 3
+        // }
+    ],
+    
+    "Business_Analytics":[
+        {
+            "button":"Take Business Analytics Assessment",
+            "name":"Business Analytics",
+            "id":1,
+            "question": 'When launching a new product which is NOT an important question to consider?',
+            "answerlist": [
+                {id:1,"answer":"Will the new product cannabalize any of our existing product offerings?"},
+                {id:2,"answer":"Can we use the same distribution channels?"},
+                {id:3,"answer":"What lunch will be served at the product launch event?"}
+            ],
+            "answer": 1
+        }
+        // ,
+        // {
+        //     "id":2,
+        //     "question": 'If I want to multiply A by B and divide the product by C, what is the syntax?',
+        //     "answerlist": [ 
+        //         {id:1,"answer":"A*B/C"},
+        //         {id:2,"answer":"A*(B/C)"},
+        //         {id:3,"answer":"(A*B)/C"}
+        //     ],
+        //     "answer": 3
+        // }
     ]
 }
 
 
 router.get('/', function(req,res,next){
-	return res.render("index.ejs",{"jobs":jobs});
+	return res.render("index.ejs",{"jobs":jobs,"assessment":assessment });
 });
 
 
@@ -164,7 +217,7 @@ router.get('/feedback/:name', function(req,res,next){
         }
     }
     //console.log({"name":assessmentname,"total":total,"score":total-missed,"missed":missedquestions});
-	return res.render("feedback.ejs",{"name":assessmentname,"total":total,"score":total-missed,"missed":missedquestions});
+	return res.render("feedback.ejs",{"name":assessment[assessmentname][0].name,"total":total,"score":total-missed,"missed":missedquestions});
 });
 
 router.get('/dashboard', function(req,res,next){
