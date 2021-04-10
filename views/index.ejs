@@ -165,8 +165,9 @@
             <h1> Job Postings </h1>
             <hr>
             <div class = "scroll listings">
-                <% jobs.forEach(function(job){ %>
-                    <div class = "jobPost" id="job<%- job.id %>" onclick="selectjob(<%- job.id %>)">
+                <% active = true
+                jobs.forEach(function(job){ %>
+                    <div class = "jobPost<% if (active) { active = false %> active<% } %>" id="job<%- job.id %>" onclick="selectjob(<%- job.id %>)">
                         <div class = "jobDescription">
                             <h2> <%- job.title %> </h2>
                             <h4> <%- job.company %> </h4>
@@ -209,6 +210,8 @@
         function selectjob(id){
             document.querySelector(".job_detail.active").classList.remove("active");
             document.getElementById("detail"+id).classList.add("active");
+            document.querySelector(".jobPost.active").classList.remove("active");
+            document.getElementById("job"+id).classList.add("active");
         }
     </script>
 

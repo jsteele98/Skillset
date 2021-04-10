@@ -102,7 +102,9 @@ blockquote{
     border: 4px solid #002e5d;
     margin: 10px 0;
 }
-
+.jobPost.active{
+    border: 8px solid #002e5d;
+}
 .scroll{
     height: calc(100vh - 220px);
     /* bottom: 15px; */
