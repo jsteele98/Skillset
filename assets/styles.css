@@ -40,6 +40,9 @@ html,body{
 .feedbackBody{
     padding-left: 15px;
 }
+.questionsMissed{
+    padding-left: 30px;
+}
 .listOfResources{
     padding-left: 30px;
 }
