@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillset</title>
+    <link href="../assets/assesment.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "question">
+            <h2> What is the correct syntax for the "If" function? </h2>
+            <div class = "answers">
+                <input type="radio" id="male" name="q1" value="male">
+                <label for="male">IF (logical_test, [value_if_true], [value_if_false])</label><br>
+                <input type="radio" id="female" name="q1" value="female">
+                <label for="female">IF ([value_if_true], [value_if_false], logical_test ])</label><br>
+                <input type="radio" id="other" name="q1" value="other">
+                <label for="other">IF ([value_if_true], logical_test, [value_if_false] ])</label>
+            </div>
+        </div>
+        
+        <div class = "question">
+            <h2> What is the correct syntax for the "If" function? </h2>
+            <div class = "answers">
+                <input type="radio" id="male" name="q2" value="male">
+                <label for="male">IF (logical_test, [value_if_true], [value_if_false])</label><br>
+                <input type="radio" id="female" name="q2" value="female">
+                <label for="female">IF ([value_if_true], [value_if_false], logical_test ])</label><br>
+                <input type="radio" id="other" name="q2" value="other">
+                <label for="other">IF ([value_if_true], logical_test, [value_if_false] ])</label>
+            </div>
+        </div>
+        <div class = "question">
+            <h2> What is the correct syntax for the "If" function? </h2>
+            <div class = "answers">
+                <input type="radio" id="male" name="q3" value="male">
+                <label for="male">IF (logical_test, [value_if_true], [value_if_false])</label><br>
+                <input type="radio" id="female" name="q3" value="female">
+                <label for="female">IF ([value_if_true], [value_if_false], logical_test ])</label><br>
+                <input type="radio" id="other" name="q3" value="other">
+                <label for="other">IF ([value_if_true], logical_test, [value_if_false] ])</label>
+            </div>
+        </div>
+        <button onclick="submit()">submit</button>
+    </div>
+
+    <script>
+
+        function submit(){
+            var radios = document.getElementsByName('genderS');
+
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    // do whatever you want with the checked radio
+                    alert(radios[i].value);
+
+                    // only one radio can be logically checked, don't check the rest
+                    break;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>
