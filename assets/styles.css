@@ -7,18 +7,20 @@ html,body{
 .container{
     width: 80%;
     margin: auto;
+}
+.container.assessment{
     margin-top: 25px;
     display: block;
     border: 3px solid #0062b8;
     border-radius: 10px;
     padding: 20px;
+
 }
 .container.flex{
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: auto;
-
 }
 
 .header{
