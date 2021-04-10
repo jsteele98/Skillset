@@ -109,7 +109,7 @@ router.get('/feedback', function(req,res,next){
 	return res.render("feedback.ejs");
 });
 
-router.get('/dasboard', function(req,res,next){
+router.get('/dashboard', function(req,res,next){
 	return res.render("employerDashboard.ejs");
 });
 

@@ -15,7 +15,8 @@
         <div class="jobpostings">
 
             <h1> Job Postings </h1>
-            <div class = "listings">
+            <hr>
+            <div class = "scroll listings">
                 <% jobs.forEach(function(job){ %>
                     <div class = "jobPost" id="job<%- job.id %>" onclick="selectjob(<%- job.id %>)">
                         <div class = "jobDescription">
@@ -29,7 +30,7 @@
         
         <% active = true
          jobs.forEach(function(job){ %>
-            <div class="job_detail<% if (active) { active = false %> active<% } %>" id="detail<%- job.id %>">
+            <div class="scroll job_detail<% if (active) { active = false %> active<% } %>" id="detail<%- job.id %>">
                 <h1> <%- job.title %> </h1>
                 <h2> <%- job.company %> </h2>
                 <%- job.description %>

@@ -49,6 +49,7 @@ html,body{
 
 .jobpostings h1{
     padding: 15px;
+    margin: 0;
     text-align: center;
 }
 .jobpostings{
@@ -62,6 +63,15 @@ html,body{
     border-radius: 10px;
 }
 
+.scroll{
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+.listings.scroll{
+    height: calc(100vh - 200px);
+
+}
+
 .job_detail{
     width: 60%;
     margin: 20px;
@@ -69,8 +79,6 @@ html,body{
     border: 3px solid #0062b8;
     display:none;
     border-radius: 10px;
-    height: calc(100vh - 150px);
-    overflow-y: auto;
 }
 .job_detail.active{
     display: block;
@@ -93,7 +101,7 @@ html,body{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: grey;
+    background: lightgrey;
     border-radius: 10px;
   }
 
