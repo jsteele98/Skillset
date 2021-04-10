@@ -187,7 +187,7 @@
                 <h2> Assessments: </h2>
                 
                 <% for (var key in assessment){ block = assessment[key]; question = block[0] %>
-                <p>example:</p>
+                <b><%= question.name %> Assessment Preview:</b>
                 <blockquote>
                     <b><%= question.question %></b><br>
                     <% question.answerlist.forEach(function(answer){ %>

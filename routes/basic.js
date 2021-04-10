@@ -9,39 +9,48 @@ var ejs = require('ejs');
 jobs = [
     {
         "id":1,
-        "title":"Associate",
-        "company":"Mckinsey & Co",
-        "description":`<h3> Who You'll Work With     </h3>
+        "title":"Intern, Statistician-Data Analyst",
+        "company":"FIS",
+        "description":`<h3> Summer FIS University Program 2021     </h3>
         
 
-        <p> Associates join our offices and practices (e.g. Digital, Marketing & Sales, Operations, etc.) around the world to work in teams and directly with our clients. </p>
-         
-       <p>  When you join McKinsey as an Associate, you are joining a firm that will challenge you and invest in your professional development. In this role you will work on the best teams to help the best organizations in the world – in private, public, and social sectors – solve their most difficult problems. You will also work with many experts, from data scientists and researchers to software and app designers.</p>
-         
-        <p> If you are interested in joining a specific practice, please indicate this in your office/practice preference (combinations are possible). To learn more about how we help our clients and where you fit in, visit our careers site.</p>
-         
-        <h3> What You'll Do</h3>
-         
-        <p>You'll work in teams of typically 3 - 5 consultants, playing an active role in all aspects of client engagement.</p>
-         
-        <p> This includes gathering and analyzing information, formulating and testing hypotheses, and developing and communicating recommendations. You'll also have the opportunity to present results to client management and implement recommendations in collaboration with client team members.</p>
-         
-        <p> Associates receive exceptional training as well as frequent coaching and mentoring from colleagues on their teams. This support includes a Partner from your local office or practice assigned to you to help guide your career as well as up to five weeks of formal training in your first two years as an Associate. Additionally, you'll receive guidance and support from your local office or practice in the selection of client projects, helping you to develop your skills and build your network.</p>
-         
-        <p> While all consultants develop specialized knowledge and a focused program as they progress with McKinsey, most are initially very broad in their focus, meaning they do not need specific industry or functional expertise to be successful. For consultants who join McKinsey as experienced professionals, this can mean building on previous knowledge or developing unique experience in an area that is completely new.</p>
-         
-         <p>For all Associates, you will likely intersect with many elements of our firm's work including Digital, Analytics, Implementation - either by collaborating on teams or working with colleagues from these groups.</p>
-         
-         <p><h3>Qualifications</h3>
-             <ul><li> Bachelor's degree; Advanced graduate degree (e.g., MBA, PhD, etc.) typically preferred; Academic degree requirements may vary by country </li>
-             <li> Outstanding records of academic and managerial or professional achievement </li> 
-             <li> Exceptional analytical and quantitative problem-solving skills </li>
-             <li> Strong record of leadership in an academic, professional, or extracurricular setting </li>
-             <li> Ability to work collaboratively in a team environment </li>
-             <li> Ability to work effectively with people at all levels in an organization </li>
-             <li> Ability to communicate complex ideas effectively, both verbally and in writing, in English and the local office language(s)
-             <li> Willingness to travel </li>
+        <p> Are you curious, motivated, and forward-thinking? At FIS you’ll have the opportunity to work on some of the most challenging and relevant issues in financial services and technology. Our talented people empower us, and we believe in being part of a team that is open, collaborative, entrepreneurial, passionate and above all fun.</p>
+
+        <p> Join the 2021 FIS University Summer Internship Program! </p>
+
+        <p> As a 2021 FIS University Program Summer Intern, you will have the opportunity to participate in team projects, community service activities, social events, professional development seminars and work alongside team mentors. This is a full time (40hrs/week) paid internship that will begin on June 7, 2021 and conclude on August 13, 2021. </p>
+        
+        <h3> About The Team </h3>
+        
+        <p> We are a group of data scientists that leverage machine learning, statistical modeling, and quantitative analysis. We range in experience from members who have just graduated from school to 20+ year industry veterans. </p>
+        
+        <p><h3> What You Will Be Doing</h3></p>
+
+        <ul><li> You will employ machine learning and statistical modeling to create and enhance data driven products </li>
+            <li> You will analyze client data to develop optimal strategies and show value of products </li> 
+            <li> You will create summaries of your work and present to internal and external stakeholders </li>
+            <li> You will be leveraging data science tools and languages such as SAS, Python, and R </li>
+            <li> You will participate in creating dynamic business intelligence dashboards and reporting for both internal and external stakeholders </li>
          </ul></p> 
+
+         <p><h3>What You Bring</h3>
+
+         <ul><li> Pursuing a Masters or PhD in Statistics, Data Science or related job discipline (graduating December 2021 through May 2022)</li>
+            <li> Proficiency in data science and business intelligence tools</li>
+            <li> Strong written and communication skills</li>
+            <li> Adaptability, a drive to learn, and strong problem-solving skills</li>
+            <li> Ability to handle multiple projects and priorities while maintaining accuracy and speed</li>
+            <li> Ability to work well independently and within a team</li>
+         </ul></p> 
+
+         <p><h3>What We Offer You</h3>
+
+         <ul><li>Competitive full-time paid summer internship</li>
+            <li>Opportunity to participate in projects that directly impact business value</li>
+            <li>The chance to work on some of the most challenging, relevant issues in financial services & technology</li>
+            <li>Time to support charities and give back in your community</li>
+            <li>A work environment built on collaboration, flexibility and respect</li>
+        </ul><p>
         `
     },
     
