@@ -75,7 +75,7 @@ jobs = [
         "description":`<h3> Who You'll Work With     </h3>
         
         <h4> Salary: $25/hr </h4>
-        
+
         <p> Associates join our offices and practices (e.g. Digital, Marketing & Sales, Operations, etc.) around the world to work in teams and directly with our clients. </p>
          
        <p>  When you join McKinsey as an Associate, you are joining a firm that will challenge you and invest in your professional development. In this role you will work on the best teams to help the best organizations in the world – in private, public, and social sectors – solve their most difficult problems. You will also work with many experts, from data scientists and researchers to software and app designers.</p>
